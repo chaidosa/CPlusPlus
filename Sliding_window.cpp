@@ -59,6 +59,7 @@ int main(int argc, const char *argv[]){
     }
     int window_size;
     cin>>window_size;
+    //Calling function
     auto result = find_max_of_the_window(V,window_size);
 
     if(result.size()==0){
