@@ -15,6 +15,7 @@ class Graph{
 };
 
 void Graph::addEdge(int u, int v){
+    //This function adds the edges in the adjacency list as we need transpose of a graph so here we are taking care of that as well
     adj[u].push_back(v);
     adjT[v].push_back(u);
     visited[u] = false;
@@ -22,7 +23,7 @@ void Graph::addEdge(int u, int v){
 }
 
 void Graph::fill_order(int v){
-    
+    // This function pushes the vertices in the stack from lowest finishing time to highest
     std::list<int>::iterator i;
     visited[v] = true;
     for(i = adj[v].begin(); i!=adj[v].end(); i++)
@@ -33,7 +34,7 @@ void Graph::fill_order(int v){
 }
 
 void Graph::DFSUtil(int v){
-    
+    //This function runs DFS on the vertex v
     visited[v] = true;
     std::cout << v << " ";
     std::list<int>::iterator i;
@@ -43,15 +44,18 @@ void Graph::DFSUtil(int v){
 }
 
 void Graph::SCC(){
-    
+    //This function calculates the strongly connected components of a graph.
+
     for(auto i : adj){
         if(visited[i.first] == false)
             fill_order(i.first);
     }
+
     for(auto i : adj){
         visited[i.first] = false;
     }
 
+    //visiting vertices in highest to lowest finishing time
     while (!order.empty())
     {
         if(!visited[order.top()]){
