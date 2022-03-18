@@ -12,8 +12,8 @@
  2. XOR operation done even times yields `zero`
  3. XOR operation done odd times yields `number itself`
 
-**Input and Output**
-#ifndef ONLINE_JUDGE
-        freopen("input.txt","r",stdin);
-        freopen("output.txt","w",stdout);
-#endif
+**Input and Output** <br>
+#ifndef ONLINE_JUDGE <br>
+        freopen("input.txt","r",stdin); <br>
+        freopen("output.txt","w",stdout); <br>
+#endif <br>
