@@ -13,7 +13,7 @@
  3. XOR operation done odd times yields `number itself`
 
 **Input and Output** <br>
-#ifndef ONLINE_JUDGE <br>
-        freopen("input.txt","r",stdin); <br>
-        freopen("output.txt","w",stdout); <br>
-#endif <br>
+<code>#ifndef ONLINE_JUDGE
+        freopen("input.txt","r",stdin);
+        freopen("output.txt","w",stdout);
+#endif </code>
